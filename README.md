@@ -104,9 +104,10 @@ Therefore, no updates will be provided to address detection issues, however Pand
 Contributions are welcome, You can be a small part of this project!
 
 # Credits
-- https://github.com/ac3ss0r for compile-time obfuscation.
-- https://github.com/EvilBytecode some Anti-VM techniques
-
+- https://github.com/ac3ss0r `compile-time obfuscation`
+- https://github.com/EvilBytecode `Anti-VM techniques`
+- https://github.com/7etsuo/windows-api-function-cheatsheets `injection methods` 
+- https://github.com/mustjoon/evade-stager-c/tree/main `staged loader method` 
 
 # License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Chainski/PandaLoader/blob/main/LICENSE) file for details
