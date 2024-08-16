@@ -104,8 +104,8 @@ Therefore, no updates will be provided to address detection issues, however Pand
 Contributions are welcome, You can be a small part of this project!
 
 # Credits
-- https://github.com/ac3ss0r `compile-time obfuscation`
-- https://github.com/EvilBytecode `Anti-VM techniques`
+- https://github.com/ac3ss0r/obfusheader.h `compile-time obfuscation`
+- https://github.com/EvilBytecode/GoDefender `Anti-VM techniques`
 - https://github.com/7etsuo/windows-api-function-cheatsheets `injection methods` 
 - https://github.com/mustjoon/evade-stager-c/tree/main `staged loader method` 
 
