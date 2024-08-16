@@ -1,12 +1,37 @@
+<div align="center">
+<img src="https://raw.githubusercontent.com/Chainski/PandaLoader/main/assets/PandaLoader.png", width="400", height="400">
+</div>
+<div align="center">
+  <a href="https://github.com/Chainski/PandaLoader">
+    <img src="https://img.shields.io/github/languages/top/Chainski/PandaLoader?color=246AE6" alt="Top Language"></a>
+  <a href="https://github.com/Chainski/PandaLoader/stargazers">
+    <img src="https://img.shields.io/github/stars/Chainski/PandaLoader?style=flat&color=246AE6" alt="Stars"></a>
+  <a href="https://github.com/Chainski/PandaLoader/forks">
+    <img src="https://img.shields.io/github/forks/Chainski/PandaLoader?style=flat&color=246AE6" alt="Forks"></a>
+  <a href="https://github.com/Chainski/PandaLoader/issues">
+    <img src="https://img.shields.io/github/issues/Chainski/PandaLoader?style=flat&color=246AE6" alt="Issues"></a>
+  <a href="https://github.com/Chainski/PandaLoader/commits">
+    <img src="https://img.shields.io/github/commit-activity/m/Chainski/PandaLoader?color=246AE6" alt="Commit Activity"></a>
+  <br>
+  <a href="https://github.com/Chainski/PandaLoader?tab=MIT-1-ov-file">
+    <img src="https://img.shields.io/github/license/Chainski/PandaLoader?color=246AE6" alt="License"></a>
+  <a href="https://github.com/Chainski/PandaLoader/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Chainski/PandaLoader?color=246AE6" alt="Contributors"></a>
+  <a href="https://github.com/Chainski/PandaLoader">
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FChainski%2FPandaLoader&count_bg=%23246AE6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Views"></a>
+  <a href="https://github.com/Chainski/PandaLoader">
+    <img src="https://img.shields.io/github/repo-size/Chainski/PandaLoader?color=246AE6" alt="Repo Size"></a>
+</div>
+
 <h1 align="center">PandaLoader</h1>
+
 
 
 PandaLoader is a WIP shellcode loader designed to evade detection by using various anti-analysis techniques and features such as anti-virtual machine (VM) detection, process injection, and payload decryption.
 
 
-# FEATURES
+# Features
 ```
-
 [~] Add Windows Defender Exclusions [admin required]
 [~] Persistence [optional] 
 [~] Mutex : Only a single instance of PandaLoader will be running at any given time
