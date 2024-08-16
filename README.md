@@ -73,7 +73,7 @@ If the `MELT` option is enabled, the loader deletes itself after successful exec
 # PandaLoader Builder Usage Guide
 The PandaLoader Builder is a tool designed to help you create a custom payload loader by performing several steps, including shellcode encryption and remote hosting.
 - Open `PandaBuilder.cmd`
-- Input Shellcode: Start by providing your raw shellcode as input to the Builder.
+- Input Shellcode: Start by providing your raw shellcode as input to the Builder. `eg: shellcode.bin`
 - Shellcode Encryption: The Builder will encrypt your shellcode using `XOR` encryption. This step is essential for obfuscating the payload, to bypass `AV/EDR` etc.
 - Upload Encrypted Shellcode: After encryption, you will be prompted to upload the encrypted shellcode to a remote server.
 - Provide Download Link: Once the shellcode is uploaded, the Builder will ask for the `download link` to the shellcode. This link is necessary for the next step.
