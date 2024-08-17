@@ -1,4 +1,3 @@
-﻿# https://github.com/Chainski/PandaLoader
 cmake_minimum_required(VERSION 3.8)
 project(PandaLoader)
 set(CMAKE_CXX_STANDARD 17)
@@ -11,4 +10,4 @@ set(SOURCE_FILES
 )
 include_directories(${CMAKE_SOURCE_DIR})
 add_executable(PandaLoader ${SOURCE_FILES})
-target_link_libraries(PandaLoader wininet)
+target_link_libraries(PandaLoader wininet psapi)
