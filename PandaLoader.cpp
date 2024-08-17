@@ -130,7 +130,6 @@ BOOL VMArtifactsDetect() {
     return FALSE;
 }
 
-
 // Check for specific processes and other VM-related indicators
 BOOL VMPROTECT() {
     std::vector<std::wstring> processNames = {
