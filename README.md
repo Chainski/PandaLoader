@@ -67,7 +67,7 @@ After writing the shellcode, the memory permissions are adjusted to `PAGE_EXECUT
 The shellcode is executed by queuing it as an APC (Asynchronous Procedure Call) to the suspended process thread using `QueueUserAPC`.
 The thread is then resumed using `ResumeThread`, which causes the shellcode to be executed in the context of the target process.
 - Persistence and Cleanup :
-If persistence is enabled (ENABLE_STARTUP), the loader copies itself to a specific directory and creates a scheduled task to run on startup.
+If persistence is enabled `ENABLE_STARTUP`, the loader copies itself to a specific directory and creates a scheduled task to run on startup.
 If the `MELT` option is enabled, the loader deletes itself after successful execution to reduce the footprint on the victim machine.
 
 # PandaLoader Builder Usage Guide
