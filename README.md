@@ -101,7 +101,7 @@ Therefore, no updates will be provided to address detection issues, however Pand
 
 Contributions are welcome, You can be a small part of this project!
 
-References
+# References
 - https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101
 - https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/register-scheduledtask?view=windowsserver2022-ps
 - https://www.ired.team/offensive-security/code-injection-process-injection/apc-queue-code-injection
