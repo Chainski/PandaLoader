@@ -97,13 +97,18 @@ This project is fully undetectable (FUD) on its release day (August 2024). Howev
 Modifying the stub to avoid detection is challenging, and any progress made will likely be rendered useless due to constant AV signature updates within a few days.
 Therefore, no updates will be provided to address detection issues, however PandaLoader offers a fully functional implementation that is easy to modify and extend. 
 
-
-
 # Contributing
 
 Contributions are welcome, You can be a small part of this project!
 
+References
+- https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101
+- https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/register-scheduledtask?view=windowsserver2022-ps
+- https://www.ired.team/offensive-security/code-injection-process-injection/apc-queue-code-injection
+- https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexa
+  
 # Credits
+- https://github.com/TheWover/donut `converts NATIVE and .NET payloads into raw shellcode`
 - https://github.com/ac3ss0r/obfusheader.h `compile-time obfuscation`
 - https://github.com/EvilBytecode/GoDefender `Anti-VM techniques`
 - https://github.com/7etsuo/windows-api-function-cheatsheets `injection methods` 
