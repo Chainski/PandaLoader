@@ -164,6 +164,15 @@ BOOL VMPROTECT() {
         if (GetFileAttributesW(filePath.c_str()) != INVALID_FILE_ATTRIBUTES) {
             return TRUE;
         }
+        wchar_t windir[MAX_PATH];
+        result = GetEnvironmentVariableW(OBF(L"WINDIR"), windir, MAX_PATH);
+        if (result > 0 && result < MAX_PATH) {
+            std::wstring exePath = std::wstring(windir) + OBF(L"\\psexesvc.exe");
+
+            if (GetFileAttributesW(exePath.c_str()) != INVALID_FILE_ATTRIBUTES) {
+                return TRUE;
+            }
+        }
     }
     HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
     if (hSnapshot != INVALID_HANDLE_VALUE) {
