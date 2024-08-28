@@ -27,7 +27,6 @@
 
 PandaLoader is a WIP shellcode loader designed to evade detection by using various anti-analysis techniques and features such as anti-virtual machine (VM) detection, process injection, and payload decryption.
 
-
 # Features
 ```
 [~] Add Windows Defender Exclusions [admin required]
