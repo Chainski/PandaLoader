@@ -7,7 +7,6 @@
 #include <string>
 #include <Shlwapi.h>
 #include "obfusheader.h"
-#include <Windows.h>
 #include <cstring> 
 #include <algorithm>
 #include <psapi.h>
