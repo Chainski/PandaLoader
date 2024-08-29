@@ -11,7 +11,6 @@
 #include <cstring> 
 #include <algorithm>
 #include <psapi.h>
-#include <TlHelp32.h>
 #pragma comment(lib, "Wininet.lib")
 #define ENABLE_ADMIN 0 // Mandatory when adding persistence and WD exclusions
 #define ADD_EXCLUSION 0 // Optional (Add Windows Defender Exclusions)
